@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.6.5 on win32)" generated="20190906 14:03:09.293" rpa="false">
+<suite id="s1" name="Ts1" source="D:\pythonproject\ts1.robot">
+<test id="s1-t1" name="百度搜索松勤">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>http://www.baidu.com</arg>
+<arg>Firefox</arg>
+</arguments>
+<msg timestamp="20190906 14:03:09.500" level="INFO">Opening browser 'Firefox' to base url 'http://www.baidu.com'.</msg>
+<status status="PASS" starttime="20190906 14:03:09.499" endtime="20190906 14:03:16.823"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<status status="PASS" starttime="20190906 14:03:16.824" endtime="20190906 14:03:16.827"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=kw</arg>
+<arg>松勤\n</arg>
+</arguments>
+<msg timestamp="20190906 14:03:16.828" level="INFO">Typing text '松勤
+' into text field 'id=kw'.</msg>
+<status status="PASS" starttime="20190906 14:03:16.828" endtime="20190906 14:03:16.903"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of element identified by ``locator``.</doc>
+<arguments>
+<arg>id=1</arg>
+</arguments>
+<assign>
+<var>${firstRet}</var>
+</assign>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190906 14:03:21.970" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20190906 14:03:21.916" endtime="20190906 14:03:21.971"></status>
+</kw>
+<msg timestamp="20190906 14:03:21.974" level="FAIL">Element with locator 'id=1' not found.</msg>
+<status status="FAIL" starttime="20190906 14:03:16.904" endtime="20190906 14:03:21.974"></status>
+</kw>
+<status status="FAIL" starttime="20190906 14:03:09.498" endtime="20190906 14:03:21.975" critical="yes">Element with locator 'id=1' not found.</status>
+</test>
+<status status="FAIL" starttime="20190906 14:03:09.294" endtime="20190906 14:03:21.977"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1">Critical Tests</stat>
+<stat pass="0" fail="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" id="s1" name="Ts1">Ts1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
